@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main() {
+    float cgpa,programmingGpa;
+    char degree,studyType;
+    cout<<"Enter your CGPA = ";
+    cin>>cgpa;
+    cout<<"Enter your programming GPA = ";
+    cin>>programmingGpa;
+    if(cgpa>=3 and programmingGpa>=3){
+        cout<<"Enter your Degree (MS as 'M' and BS as 'B') = ";
+        cin>>degree;
+        cout<<"Enter Your Study Type (Full time as 'F' and Part Time as 'P') = ";
+        cin>>studyType;
+        if(degree=='M' and studyType=='F'){
+            cout<<"You are eligible for full time TAShip!";
+        }else if(degree=='M' and studyType=='P'){
+            cout<<"You are eligible for part time TAShip!";
+        }else if(degree=='B' and programmingGpa>=3.3){
+            cout<<"You are eligible for part time TAShip!";
+        }else{
+            cout<<"You are not eligible for TAShip!";
+        }
+    }else{
+        cout<<"Your CGPA or Programming GPA is below 3 and you are not eligible!";
+    }
+}
